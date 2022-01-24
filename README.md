@@ -32,9 +32,11 @@ Based on the election analysis csv file and the image below, **369,711** votes w
 
 ![](images/total_votes_cast.png)
 
-To get the total number of votes cast using Python, the following code snippet was used to:
+To get the total number of votes cast using Python, the following code snippets were used to:
   1. Initialize the total vote counter and set it to 0
-  2. Iterate through each row of the CSV file and add **1** vote for each row
-  3. Print to the election analysis CSV text file
+
+
+  3. Iterate through each row of the CSV file and add **1** vote for each row
+  4. Print results to the terminal and save to the text file
 
 ## 3 Election-Audit Summary
