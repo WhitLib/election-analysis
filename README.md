@@ -209,4 +209,31 @@ for candidate_name in candidate_votes:
 
 The winning candidate was **Diana DeGette** with 272,892 votes; 73.8% of the total votes cast in the election. 
 
+To extract these results, the following code snippets were used: 
+1. Track the winning candidate, vote count and percentage
+
+````
+winning_candidate = ""
+winning_count = 0
+winning_percentage = 0
+````
+2. Write an if statement to determine the winning vote count, winning percentage, and candidate
+````
+if (votes > winning_count) and (vote_percentage > winning_percentage):
+            winning_count = votes
+            winning_candidate = candidate_name
+            winning_percentage = vote_percentage
+````
+3. Print the winning candidate (to terminal) and save the results to the election analysis text file
+````
+winning_candidate_summary = (
+        f"-------------------------\n"
+        f"Winner: {winning_candidate}\n"
+        f"Winning Vote Count: {winning_count:,}\n"
+        f"Winning Percentage: {winning_percentage:.1f}%\n"
+        f"-------------------------\n")
+    print(winning_candidate_summary)
+
+    txt_file.write(winning_candidate_summary)
+````
 ## 3 Election-Audit Summary
