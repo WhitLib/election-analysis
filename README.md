@@ -116,5 +116,31 @@ for county_name in county_dict:
          # Save the county votes to a text file.
         txt_file.write(county_results)
  ````
- 
+### 2.3 County with Largest Number of Votes
+
+**Denver County** had the largest number of votes/voter turnout in the election analysis. Using Python, the following code snippets were run to get the county with the most amount of casted votes: 
+
+1. Track the largest county and county voter turnout
+````
+county_largest_turnout = ""
+votes_largest_turnout = 0
+````
+
+2. Write an if statement to determine the winning county and get its vote count
+````
+        if (county_votes > votes_largest_turnout):
+            votes_largest_turnout = county_votes
+            county_largest_turnout = county_name
+````
+3. Print the county with the largest turnout to the terminal and save the results to the text file
+````
+winning_county_summary = (
+        f"\n-------------------------\n"
+        f"Largest County Turnout: {county_largest_turnout}\n"
+        f"-------------------------\n")
+    print(winning_county_summary)
+
+    txt_file.write(winning_county_summary)
+````
+
 ## 3 Election-Audit Summary
