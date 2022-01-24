@@ -81,12 +81,12 @@ county_list = []
 county_dict = {}
 ````
 
-2. Extract the county name from each row
+2. In a `for` loop, extract the county name from each row
 ````
     county_name = row[1]
 ````
     
-3. Write an if statement that checks that the county does not match any existing county in the county list
+3. Write an `if` statement that checks that the county does not match any existing county in the county list
 
 ````
 if county_name not in county_list:
@@ -104,7 +104,7 @@ if county_name not in county_list:
 with open(file_to_save, "w") as txt_file:
 ````
 
-4. Write a for loop to get the county from the county dictionary
+4. Write a `for` loop to get the county from the county dictionary
 
 ````
 for county_name in county_dict:
@@ -136,7 +136,7 @@ county_largest_turnout = ""
 votes_largest_turnout = 0
 ````
 
-2. Write an if statement to determine the winning county and get its vote count
+2. Write an `if` statement to determine the winning county and get its vote count
 ````
         if (county_votes > votes_largest_turnout):
             votes_largest_turnout = county_votes
@@ -165,9 +165,9 @@ Raymon Anthony Doane | 11,606 | 3.1%
 To find the candidates, their number of votes, and percentage of total votes, the following code snippets were used: 
 
 1. Create a candidate options list and candidate votes dictionary
-2. In a for statement, get the candidate name for each row
+2. In a `for` loop, get the candidate name for each row
 3. If the candidate does not match any existing candidate, add it to the candidate list
-4. Create a for statement that retrieves the final candidate vote count and percentage
+4. Create a `for` loop that retrieves the final candidate vote count and percentage
 5. Print the results to the terminal and save to the text file
 
 ### 2.5 Winning Candidate
