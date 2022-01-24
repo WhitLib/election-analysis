@@ -33,16 +33,39 @@ Based on the election analysis csv file and the image below, **369,711** votes w
 ![](images/total_votes_cast.png)
 
 To get the total number of votes cast using Python, the following code snippets were used to:
-  1. Initialize the total vote counter and set it to 0
-    
-  ![](images/initialize_vote_counter.png)
+  1. Initialize the total vote counter and set it to **zero**
+ 
+````total_votes = 0````
 
-  2. Iterate through each row of the CSV file and add **1** vote for each row
+  2. Iterate through each row of the CSV file and add **one** vote for each row
   
-  ![](images/add_total_vote_count.png)
-   
-  3. Print results to the terminal and save to the text file
-  
-  ![](images/total_count_to_txt_file.png)
+````total_votes = total_votes + 1````
+
+  3. Print results to the terminal and save to the election analysis text file
+
+````with open(file_to_save, "w") as txt_file:````
+
+````
+election_results = (
+
+f"\nElection Results\n"
+
+f"-------------------------\n"
+
+f"Total Votes: {total_votes:,}\n"
+
+f"-------------------------\n\n"
+
+f"County Votes:\n")
+````
+
+````print(election_results, end="")````
+
+````txt_file.write(election_results)````
+
+
+### 2.2 Breakdown of Number of Votes and Percentage of Total Votes for Counties in the Precinct
+
+To find the number of votes derived from each county
 
 ## 3 Election-Audit Summary
