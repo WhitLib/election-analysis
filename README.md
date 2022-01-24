@@ -33,19 +33,20 @@ Based on the election analysis csv file and the image below, **369,711** votes w
 ![](images/total_votes_cast.png)
 
 To get the total number of votes cast using Python, the following code snippets were used to:
-  1. Initialize the total vote counter and set it to **zero**
+
+1. Initialize the total vote counter and set it to **zero**
  
 ````
 total_votes = 0
 ````
 
-  2. Iterate through each row of the CSV file and add **one** vote for each row
+2. Iterate through each row of the CSV file and add **one** vote for each row
   
 ````
+for row in reader:
 total_votes = total_votes + 1
 ````
-
-  3. Print results to the terminal and save to the election analysis text file
+3. Print results to the terminal and save to the election analysis text file
 
 ````
 with open(file_to_save, "w") as txt_file:
@@ -83,6 +84,7 @@ county_dict = {}
 
 2. In a `for` loop, extract the county name from each row
 ````
+for row in reader:
     county_name = row[1]
 ````
     
@@ -115,7 +117,7 @@ for county_name in county_dict:
         county_vote_percentage = float(county_votes) / float(total_votes) * 100
 ````
 
-6. Print the county results to the terminal and save the county votes to the election analysis text file
+5. Print the county results to the terminal and save the county votes to the election analysis text file
 ````
          # Print the county results to the terminal.
         county_results = (
@@ -165,11 +167,44 @@ Raymon Anthony Doane | 11,606 | 3.1%
 To find the candidates, their number of votes, and percentage of total votes, the following code snippets were used: 
 
 1. Create a candidate options list and candidate votes dictionary
+````
+candidate_options = []
+candidate_votes = {}
+````
 2. In a `for` loop, get the candidate name for each row
+````
+for row in reader:
+  candidate_name = row[2]
+````
 3. If the candidate does not match any existing candidate, add it to the candidate list
-4. Create a `for` loop that retrieves the final candidate vote count and percentage
-5. Print the results to the terminal and save to the text file
+````
+if candidate_name not in candidate_options:
 
+            # Add the candidate name to the candidate list.
+            candidate_options.append(candidate_name)
+
+            # And begin tracking that candidate's voter count.
+            candidate_votes[candidate_name] = 0
+
+        # Add a vote to that candidate's count
+        candidate_votes[candidate_name] += 1
+````
+4. Create a `for` loop that retrieves the final candidate vote count and percentage
+````
+for candidate_name in candidate_votes:
+
+        # Retrieve vote count and percentage
+        votes = candidate_votes.get(candidate_name)
+        vote_percentage = float(votes) / float(total_votes) * 100
+        candidate_results = (
+            f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+````
+5. Print the results to the terminal and save to the text file
+````
+        print(candidate_results)
+        
+        txt_file.write(candidate_results)
+````
 ### 2.5 Winning Candidate
 
 The winning candidate was **Diana DeGette** with 272,892 votes; 73.8% of the total votes cast in the election. 
