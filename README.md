@@ -152,5 +152,8 @@ winning_county_summary = (
 
     txt_file.write(winning_county_summary)
 ````
+### 2.4 Breakdown of Number of Votes and Percentage of Total Votes Each Candidate Received
+
+### 2.5 Winning Candidate
 
 ## 3 Election-Audit Summary
