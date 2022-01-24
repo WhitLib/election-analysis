@@ -34,9 +34,43 @@ Based on the election analysis csv file and the image below, **369,711** votes w
 
 To get the total number of votes cast using Python, the following code snippets were used to:
   1. Initialize the total vote counter and set it to 0
+    
+````# Initialize a total vote counter````
 
+````total_votes = 0````
 
-  3. Iterate through each row of the CSV file and add **1** vote for each row
+  2. Iterate through each row of the CSV file and add **1** vote for each row
+
+````# For each row in the CSV file.````
+
+````for row in reader:````
+
+---- ````# Add to the total vote count````
+   
+---- ````total_votes = total_votes + 1````
+   
   4. Print results to the terminal and save to the text file
+
+````# Save the results to our text file.````
+
+````with open(file_to_save, "w") as txt_file:````
+
+----````# Print the final vote count (to terminal)````
+
+----````election_results = (````
+
+------````f"\nElection Results\n"````
+
+------````f"-------------------------\n"````
+
+------````f"Total Votes: {total_votes:,}\n"````
+
+------````f"-------------------------\n\n"````
+
+------````f"County Votes:\n")````
+
+----````print(election_results, end="")````
+
+----````txt_file.write(election_results)````
 
 ## 3 Election-Audit Summary
