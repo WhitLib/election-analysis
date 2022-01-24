@@ -22,7 +22,19 @@ Given that the results of this coding script were successful, the code generated
 
 - Python 3.7.6
 - Visual Studio Code or equivalent text editor
+- Microsoft Excel version 16 or newer
 
 ## 2 Election-Audit Results
+
+### 2.1 Number of Votes Cast in the Congressional Election 
+
+Based on the election analysis csv file and the image below, **369,711** votes were cast in the Congressional election:
+
+![](images/total_votes_cast.png)
+
+To get the total number of votes cast using Python, the following code snippet was used to:
+  1. Initialize the total vote counter and set it to 0
+  2. Iterate through each row of the CSV file and add **1** vote for each row
+  3. Print to the election analysis CSV text file
 
 ## 3 Election-Audit Summary
