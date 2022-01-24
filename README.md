@@ -1,5 +1,4 @@
 # Election-Analysis
-Analyze Election Results Using Python
 
 ### Table of Contents
 - [1 Purpose](#1-purpose-of-election-analysis)
