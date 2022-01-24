@@ -154,7 +154,7 @@ winning_county_summary = (
 ````
 ### 2.4 Breakdown of Number of Votes and Percentage of Total Votes Each Candidate Received
 
-In this analysis, three candidates received votes for the Congressional Election - **Charles Casper Stockham, Diana DeGette, and Raymon Anthony Doane**. The breakdown for each candidate is shown in the table below: 
+In this analysis, three candidates received votes for the Congressional Election - **Charles Casper Stockham, Diana DeGette, and Raymon Anthony Doane**. The rsults for each candidate are shown in the table below: 
 
 Candidate Name | Number of Votes | Percentage of Total Votes
 -------------- | --------------- | -------------------------
@@ -164,6 +164,11 @@ Raymon Anthony Doane | 11,606 | 3.1%
 
 To find the candidates, their number of votes, and percentage of total votes, the following code snippets were used: 
 
+1. Create a candidate options list and candidate votes dictionary
+2. In a for statement, get the candidate name for each row
+3. If the candidate does not match any existing candidate, add it to the candidate list
+4. Create a for statement that retrieves the final candidate vote count and percentage
+5. Print the results to the terminal and save to the text file
 
 ### 2.5 Winning Candidate
 
