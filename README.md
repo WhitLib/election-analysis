@@ -1,10 +1,15 @@
-# election-analysis
-Analyze election results using Python
+# Election-Analysis
+Analyze Election Results Using Python
 
 ### Table of Contents
 - [1 Purpose](#1-purpose-of-election-analysis)
   - [1.1 Required Tools](#11-required-tools)
-- [2 Election-Audit Results](#2-election-audit-results)
+- [2 Election-Audit Results](#2-election-audit-results) 
+  -  [2.1 Number of Votes Cast in the Congressional Election](#21-number-of-votes-cast-in-the-congressional-election)
+  -  [2.2 Breakdown of Number of Votes and Percentage of Total Votes for Counties in the Precinct](#22-breakdown-of-number-of-votes-and-percentage-of-total-votes-for-counties-in-the-precinct)
+  -  [2.3 County with Largest Number of Votes](#23-county-with-largest-number-of-votes)
+  -  [2.4 Breakdown of Number of Votes and Percentage of Total Votes Each Candidate Received](#24-breakdown-of-number-of-votes-and-percentage-of-total-votes-each-candidate-received)
+  -  [2.5 Winning Candidate](#25-winning-candidate) 
 - [3 Election-Audit Summary](#3-election-audit-summary)
 
 ## 1 Purpose of Election Analysis
@@ -237,3 +242,5 @@ winning_candidate_summary = (
     txt_file.write(winning_candidate_summary)
 ````
 ## 3 Election-Audit Summary
+
+The `PyPoll` code used in this analysis has proven successful to derive total vote count; number of votes received for each candidate; percentage of votes received for each candidate; and overall winner of the Congressional Election. Given the results of this analysis, it is recommended that this code be used for other future elections. With appropriate modifications to the code - beginning with the file loaded either directly or indirectly from a path - this can be duplicated downstream to extract similar results. 
