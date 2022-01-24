@@ -154,6 +154,19 @@ winning_county_summary = (
 ````
 ### 2.4 Breakdown of Number of Votes and Percentage of Total Votes Each Candidate Received
 
+In this analysis, three candidates received votes for the Congressional Election - **Charles Casper Stockham, Diana DeGette, and Raymon Anthony Doane**. The breakdown for each candidate is shown in the table below: 
+
+Candidate Name | Number of Votes | Percentage of Total Votes
+-------------- | --------------- | -------------------------
+Charles Casper Stockham | 85,213 | 23.0%
+Diana DeGette | 272,892 | 73.8%
+Raymon Anthony Doane | 11,606 | 3.1%
+
+To find the candidates, their number of votes, and percentage of total votes, the following code snippets were used: 
+
+
 ### 2.5 Winning Candidate
+
+The winning candidate was **Diana DeGette** with 272,892 votes; 73.8% of the total votes cast in the election. 
 
 ## 3 Election-Audit Summary
